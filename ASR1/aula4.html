@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Formulário</title>
+        <meta charset="UTF-8">
+		<style type="text/css">
+			body {
+				font-family: Arial
+			}
+			.exercicio {
+				font-weight: bold;
+				color: blue
+			}
+		</style>
+    </head>
+    <body>
+        <form id="form" action="" method="post">
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td class="exercicio">Nome completo:</td>
+                        <td><input type="text" name="nome" value="" size="30"/></td>
+                    </tr>
+                    <tr>
+                        <td class="exercicio">Login:</td>
+                        <td><input type="text" name="login" value="" size="10"/></td>
+                    </tr>
+                    <tr>
+                        <td class="exercicio">Senha:</td>
+                        <td><input type="password" name="senha" value="" size="10"/></td>
+                    </tr>
+                    <tr>
+                        <td class="exercicio" colspan="2">Em que moeda prefere receber o salário?</td>
+                    </tr>
+                    <tr>
+                        <td  colspan="2">
+                            <input type="radio" name="moeda" id="real" value="real"/>
+                            <label for="real">Real</label><br>
+                            <input type="radio" name="moeda" id="dolar" value="dolar"/>
+                            <label for="dolar">Dolar</label><br>
+                            <input type="radio" name="moeda" id="euro" value="euro"/>
+                            <label for="euro">Euro</label><br>
+                            <input type="radio" name="moeda" id="yen" value="yen"/>
+                            <label for="yen">Yen</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="exercicio" colspan="2">Selecione as linguagens que já estudou:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox" name="ling" id="c" value="c"/>
+                            <label for="c">C</label><br>
+                            <input type="checkbox" name="ling" id="cpp" value="cpp"/>
+                            <label for="cpp">C++</label><br>
+                            <input type="checkbox" name="ling" id="html" value="html"/>
+                            <label for="html">HTML</label><br>
+                            <input type="checkbox" name="ling" id="java" value="java"/>
+                            <label for="java">Java</label><br>
+                            <input type="checkbox" name="ling" id="js" value="js"/>
+                            <label for="js">Javascript</label><br>
+                            <input type="checkbox" name="ling" id="py" value="py"/>
+                            <label for="py">Python</label>
+                        </td>
+                    </tr>
+					<tr>
+                        <td class="exercicio">Foto atual:</td>
+                        <td><input type="file" id="myfile" name="myfile"></td>
+                    </tr>
+                    <tr>
+                        <td class="exercicio" colspan="2">Seus assuntos favoritos:</td>
+                    </tr>
+                    <tr> 
+                        <td colspan="2">
+                            <select name="assuntos" size="4" multiple>
+                                <option>Artes</option>
+                                <option>Esportes</option>
+                                <option>Games</option>
+                                <option>Músicas</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="exercicio" colspan="2">Gostaria de fazer comentários?</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea name="comentarios" rows="6" cols="40">Faça seus comentários aqui</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input id="submit" type="button" value="Enviar" /></td>
+						<td><input id="clearbtn" type="button" value="Limpar" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
