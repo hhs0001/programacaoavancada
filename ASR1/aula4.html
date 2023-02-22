@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <html lang="pt-br">
     <head>
         <title>Formulário</title>
@@ -95,5 +96,46 @@
                 </tbody>
             </table>
         </form>
+        <script>
+           $(document).ready(function() {
+            $("#submit").click(function() {
+                // verifica se os três primeiros campos foram preenchidos
+                var nome = $("input[name='nome']").val();
+                var login = $("input[name='login']").val();
+                var senha = $("input[name='senha']").val();
+                if (nome == "" || login == "" || senha == "") {
+                alert("Por favor, preencha os campos Nome completo, Login e Senha.");
+                return;
+                }
+                // prepara os dados do formulário para envio como mensagem JSON
+                var formData = {
+                nome: nome,
+                login: login,
+                senha: senha,
+                moeda: $("input[name='moeda']:checked").val(),
+                ling: $("input[name='ling']:checked").map(function() {
+                    return $(this).val();
+                }).get(),
+                assuntos: $("select[name='assuntos']").val(),
+                comentarios: $("textarea[name='comentarios']").val()
+                };
+                // envia a mensagem JSON via AJAX POST
+                $.ajax({
+                url: "destino.php", // substitua "destino.php" pelo nome do arquivo que receberá os dados
+                type: "POST",
+                data: JSON.stringify(formData),
+                contentType: "application/json",
+                success: function(data) {
+                    alert("Dados enviados com sucesso!");
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    alert("Erro ao enviar os dados: " + errorThrown);
+                }
+                });
+            });
+            });
+
+        </script>
+        
     </body>
 </html>
