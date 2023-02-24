@@ -10,14 +10,14 @@ O repositório está organizado da seguinte forma:
 ```/
 ├── ASR1/
 │   ├── codigo.<extensão>
-│   └── instrucoes.md
+│   └── README.md
 ├── ASR2/
 │   ├── codigo.<extensão>
-│   └── instrucoes.md
+│   └── README.md
 └── ...
 ```
 
-Cada tarefa possui uma pasta correspondente com o seu número, contendo um arquivo `codigo.<extensão>` com o código fonte da solução na linguagem escolhida para a tarefa, e um arquivo `instrucoes.md` com as instruções para a realização da tarefa.
+Cada tarefa possui uma pasta correspondente com o seu número, contendo um arquivo `codigo.<extensão>` com o código fonte da solução na linguagem escolhida para a tarefa, e um arquivo `README.md` com as instruções para a realização da tarefa.
 
 ## Como utilizar este repositório
 
