@@ -98,6 +98,10 @@
         </form>
         <script>
            $(document).ready(function() {
+            $("#clearbtn").click(function() {
+                // limpa todos os campos do formulário
+                $("#form").trigger("reset");
+            });
             $("#submit").click(function() {
                 // verifica se os três primeiros campos foram preenchidos
                 var nome = $("input[name='nome']").val();
